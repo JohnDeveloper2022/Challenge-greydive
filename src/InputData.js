@@ -98,7 +98,7 @@ function InputData() {
                 :
                 data.type == "submit" ?
                     <>
-                        <input type={data.type} name={data.name} onChange={handlerInputChange} required={data.required} />
+                        <input type={data.type} name={data.name} value={data.label} onChange={handlerInputChange} required={data.required} />
                     </>
                     :
                     data.type == "checkbox"
