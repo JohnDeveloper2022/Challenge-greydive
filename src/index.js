@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { db } from './firebase';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ViewData from './ViewData';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<App />}/>
+        <Route exact path='/views' element={<ViewData />}/>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
